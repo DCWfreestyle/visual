@@ -25,12 +25,23 @@ public class FirstFrame extends Frame {
 		Button b2 = new Button("确定");
 		Button b3 = new Button("退出");
 		f.add(BorderLayout.NORTH,b1);
-		f.add(BorderLayout.SOUTH,b2);
-		f.add(BorderLayout.WEST,b3);
-		f.add(BorderLayout.CENTER,p);
+		//f.add(BorderLayout.SOUTH,b2);
+		//f.add(BorderLayout.WEST,b3);
+		//f.add(BorderLayout.CENTER,p);
 		
 		//f.setLayout(new FlowLayout(FlowLayout.CENTER));
 		//f.setLayout(null);
+		
+		//菜单-----------------------
+		MenuBar mb =new MenuBar();
+		f.setMenuBar(mb);
+		Menu m1 = new Menu("File");
+		Menu m2 =new Menu("Edit");
+		Menu m3 = new Menu("help");
+		mb.add(m1);
+		mb.add(m2);
+		mb.setHelpMenu(m3);
+		//-----------------------------
 		
 		f.addWindowListener(f. new Mywindowadapter());
 		//f.pack();  //紧凑排列
